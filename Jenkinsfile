@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     // Definir el directorio npm global (ajusta la ruta si es diferente)
-                    def npmGlobalPath = 'C:\\Users\AxelAV.LAPTOP-FF6SODJH\\AppData\\Roaming\\npm'
+                    def npmGlobalPath = 'C:\\Users\\AxelAV.LAPTOP-FF6SODJH\\AppData\\Roaming\\npm'
                     
                     // Agregar el directorio npm al PATH temporalmente
                     def isInstalled = bat(script: "set PATH=%PATH%;${npmGlobalPath} && selenium-side-runner --version", returnStatus: true) == 0
