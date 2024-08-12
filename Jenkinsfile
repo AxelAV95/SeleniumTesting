@@ -2,9 +2,15 @@ pipeline {
 	agent any
     	stages {
 
+		stage('Instalar selenium-side-runner') {
+            steps {
+                echo "Instalando selenium-side-runner..."
+                bat 'npm install -g selenium-side-runner'
+            }
+        }
 	stage('Verificar Instalación de Selenium-side-runner') {
             steps {
-                echo "Verificando instalación de selenium-side-runner..."
+                echo "Verificando instalacion de selenium-side-runner..."
                 bat 'selenium-side-runner --version'
             }
         }
