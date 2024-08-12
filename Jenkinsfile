@@ -13,6 +13,7 @@ pipeline {
                     if (!isInstalled) {
                         echo "selenium-side-runner no está instalado. Instalando..."
                         bat "npm install -g selenium-side-runner"
+			bat "npm install -g chromedriver"
                     } else {
                         echo "selenium-side-runner ya está instalado."
                     }
