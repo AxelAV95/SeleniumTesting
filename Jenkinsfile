@@ -2,7 +2,12 @@ pipeline {
 	agent any
     	stages {
 
-	
+	stage('Verificar Instalación de Selenium-side-runner') {
+            steps {
+                echo "Verificando instalación de selenium-side-runner..."
+                bat 'selenium-side-runner --version'
+            }
+        }
 
         	stage('Pruebas de Selenium') {
             		steps {
