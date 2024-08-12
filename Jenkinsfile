@@ -25,7 +25,7 @@ pipeline {
             steps {
                 echo "Ejecutando pruebas..."
                 bat '''
-                set PATH=%PATH%;C:\\Users\AxelAV.LAPTOP-FF6SODJH\\AppData\\Roaming\\npm
+                set PATH=%PATH%;C:\\Users\\AxelAV.LAPTOP-FF6SODJH\\AppData\\Roaming\\npm
                 selenium-side-runner -c "browserName=chrome" OrdenesCompraCicloSprint1.side
                 '''
             }
