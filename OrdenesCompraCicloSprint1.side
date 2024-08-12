@@ -1,0 +1,105 @@
+{
+  "id": "38394367-315a-466e-abf8-7cb592a1f019",
+  "version": "2.0",
+  "name": "OrdenesCompraCicloSprint1",
+  "url": "https://unaproyectos-ordenes.000webhostapp.com/ordenes/view/frontend/index.php?pagina=1",
+  "tests": [{
+    "id": "5208372f-8758-41cb-a96f-ea053e45009c",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "60ffec6a-1a37-4faf-9da9-17c084c87187",
+    "name": "Agregar un producto con cantidad 0",
+    "commands": [{
+      "id": "376934a5-64ec-4ff1-b54d-a25105d332b7",
+      "comment": "",
+      "command": "open",
+      "target": "https://unaproyectos-ordenes.000webhostapp.com/ordenes/view/frontend/index.php?pagina=1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eb6796df-b5ef-4443-bf01-55ce6000936b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "993x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "011a1380-c2fe-4caf-8a38-73606c53d7b7",
+      "comment": "",
+      "command": "click",
+      "target": "name=productocantidad",
+      "targets": [
+        ["name=productocantidad", "name"],
+        ["css=.col3:nth-child(1) .productocantidad", "css:finder"],
+        ["xpath=//input[@name='productocantidad']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ab8e886-81ae-4621-8360-f215f36c70a5",
+      "comment": "",
+      "command": "type",
+      "target": "name=productocantidad",
+      "targets": [
+        ["name=productocantidad", "name"],
+        ["css=.col3:nth-child(1) .productocantidad", "css:finder"],
+        ["xpath=//input[@name='productocantidad']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "0"
+    }, {
+      "id": "eca6f7c6-47d2-4f9f-923e-3c4560680fc3",
+      "comment": "",
+      "command": "click",
+      "target": "name=agregar",
+      "targets": [
+        ["name=agregar", "name"],
+        ["css=.col3:nth-child(1) .btn", "css:finder"],
+        ["xpath=//button[@name='agregar']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Agregar a carrito')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3db10d1f-b0fe-4604-b052-698ba2a13960",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbar-toggler-icon",
+      "targets": [
+        ["css=.navbar-toggler-icon", "css:finder"],
+        ["xpath=//span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b272cfce-dbf2-44de-8cb4-cf7cab67a2ac",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-link:nth-child(2)",
+      "targets": [
+        ["css=.nav-link:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='collapsibleNavId']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'carritoview.php')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d0f1d5d3-1677-484a-8947-aa9c8984e469",
+      "comment": "",
+      "command": "open",
+      "target": "https://unaproyectos-ordenes.000webhostapp.com/ordenes/view/frontend/carritoview.php",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "5f66fc13-7123-4684-b4c8-c741fb95185c",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["5208372f-8758-41cb-a96f-ea053e45009c"]
+  }],
+  "urls": ["https://unaproyectos-ordenes.000webhostapp.com/ordenes/view/frontend/index.php?pagina=1"],
+  "plugins": []
+}
