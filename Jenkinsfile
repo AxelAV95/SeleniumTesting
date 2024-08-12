@@ -8,7 +8,7 @@ pipeline {
             		steps {
                 		echo "Ejecutando pruebas..."
 				 bat '''
-
+				selenium-side-runner -c "browserName=chrome" OrdenesCompraCicloSprint1.side 
                 		'''
 				
             		}
