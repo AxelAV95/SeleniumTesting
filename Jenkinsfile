@@ -1,21 +1,19 @@
 pipeline {
     agent any
     stages {
-        /*stage('Verificar Instalación de selenium-side-runner') {
+        stage('Configurar entorno') {
             steps {
-                script {
-                    // Verificar si selenium-side-runner está instalado
-                    def isInstalled = sh(script: "which selenium-side-runner", returnStatus: true) == 0
-                    if (!isInstalled) {
-                        echo "selenium-side-runner no está instalado. Instalando..."
-                        sh 'sudo npm install -g selenium-side-runner'
-                        sh 'sudo npm install -g chromedriver'
-                    } else {
-                        echo "selenium-side-runner ya está instalado."
-                    }
-                }
+                echo "Configurando entorno..."
+                sh '''
+                # Añadir npm global bin al PATH
+                export PATH=$PATH:$(npm bin -g)
+
+                # Verificar instalación de selenium-side-runner y chromedriver
+                which selenium-side-runner || { echo "selenium-side-runner no encontrado. Instalando..."; npm install -g selenium-side-runner; }
+                which chromedriver || { echo "chromedriver no encontrado. Instalando..."; npm install -g chromedriver; }
+                '''
             }
-        }*/
+        }
 
         stage('Pruebas de Selenium') {
             steps {
