@@ -20,7 +20,7 @@ pipeline {
                 echo "Ejecutando pruebas..."
                 sh '''
                 export PATH=$PATH:$(npm bin -g)
-                selenium-side-runner -c "browserName=chrome" OrdenesCompraCicloSprint1.side
+                selenium-side-runner -c "browserName=chrome,goog:chromeOptions.args=[--headless,--no-sandbox,--disable-dev-shm-usage,--disable-gpu,--remote-debugging-port=9222]" OrdenesCompraCicloSprint1.side
                 '''
             }
         }
