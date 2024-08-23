@@ -8,8 +8,8 @@ pipeline {
                     def isInstalled = sh(script: "which selenium-side-runner", returnStatus: true) == 0
                     if (!isInstalled) {
                         echo "selenium-side-runner no está instalado. Instalando..."
-                        sh 'npm install -g selenium-side-runner'
-                        sh 'npm install -g chromedriver'
+                        sh 'sudo npm install -g selenium-side-runner'
+                        sh 'sudo npm install -g chromedriver'
                     } else {
                         echo "selenium-side-runner ya está instalado."
                     }
