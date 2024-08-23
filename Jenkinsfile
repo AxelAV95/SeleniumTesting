@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Verificar Instalación de selenium-side-runner') {
+        /*stage('Verificar Instalación de selenium-side-runner') {
             steps {
                 script {
                     // Verificar si selenium-side-runner está instalado
@@ -15,7 +15,7 @@ pipeline {
                     }
                 }
             }
-        }
+        }*/
 
         stage('Pruebas de Selenium') {
             steps {
