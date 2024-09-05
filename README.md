@@ -1,4 +1,8 @@
-# testingRepository
+# Selenium testing
+
+Contiene scripts de selenium para automatización con Jenkins
+
+----------------------------------------------------------------------------------------------------------------
 
 docker exec -it -u root ID /bin/bash
 
